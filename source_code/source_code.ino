@@ -26,6 +26,7 @@ void loop() {
   Serial.write(yAxis);
   // Y-axis used for forward and backward control
   if (yAxis < 470) {
+    Serial.write("MORE THAN 470");
     // Set Motor A backward
     digitalWrite(in1, HIGH);
     digitalWrite(in2, LOW);
@@ -38,6 +39,7 @@ void loop() {
   }
   else if (yAxis > 550) {
     // Set Motor A forward
+    Serial.write("HERERERERE");
     digitalWrite(in1, LOW);
     digitalWrite(in2, HIGH);
     // Set Motor B forward
@@ -49,6 +51,7 @@ void loop() {
   }
   // If joystick stays in middle the motors are not moving
   else {
+    Serial.write("WTHHHH");
     motorSpeedA = 0;
     motorSpeedB = 0;
   }
